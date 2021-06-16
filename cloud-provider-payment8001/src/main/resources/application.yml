@@ -14,3 +14,5 @@ spring:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.ucandoooh.springcloud.entities
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

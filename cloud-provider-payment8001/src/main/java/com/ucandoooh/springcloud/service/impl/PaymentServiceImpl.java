@@ -6,6 +6,9 @@ import com.ucandoooh.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author ucandoooh
+ */
 @Service
 public class PaymentServiceImpl implements PaymentService {
 

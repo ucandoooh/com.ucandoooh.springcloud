@@ -4,6 +4,9 @@ import com.ucandoooh.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+/**
+ * @author ucandoooh
+ */
 @Mapper
 public interface PaymentDao {
 

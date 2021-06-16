@@ -6,11 +6,15 @@ import com.ucandoooh.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.server.PathParam;
 
+/**
+ * @author ucandoooh
+ */
 @Slf4j
 @RestController
 public class PaymentController {
@@ -30,7 +34,7 @@ public class PaymentController {
     }
 
     @GetMapping("/payment/get/{id}")
-    public CommonResult<Payment> getPaymentById(@PathParam("id") Long id) {
+    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         if (null != payment) {
             return new CommonResult<>(200, "查询成功", payment);
