@@ -1,4 +1,4 @@
-package com.ucandoooh.springboot.controller;
+package com.ucandoooh.springcloud.controller;
 
 import com.ucandoooh.springcloud.entities.CommonResult;
 import com.ucandoooh.springcloud.entities.Payment;
@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     @Autowired
     private RestTemplate restTemplate;
