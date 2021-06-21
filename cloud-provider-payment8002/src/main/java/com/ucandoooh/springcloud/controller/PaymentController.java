@@ -26,7 +26,7 @@ public class PaymentController {
     private DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
-    private int port;
+    private String port;
 
     @PostMapping("/payment/create")
     public CommonResult<Payment> create(@RequestBody Payment payment) {
@@ -64,4 +64,25 @@ public class PaymentController {
 
         return discoveryClient;
     }
+
+    @GetMapping("/payment/lb")
+    public String myLoadBalance() {
+        return port;
+    }
+
+    @GetMapping("/payment/openFeign")
+    public String openFeign() {
+        return port;
+    }
+
+    @GetMapping("/payment/openFeign/timeout")
+    public String openFeignTimeOut() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return port;
+    }
+
 }

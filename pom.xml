@@ -18,6 +18,7 @@
         <module>cloud-consumerzk-order80</module>
         <module>cloud-providerconsul-payment8006</module>
         <module>cloud-consumerconsul-order80</module>
+        <module>cloud-consumer-feign-order80</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -25,8 +26,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <spring.boot.version>2.4.6</spring.boot.version>
-        <spring.cloud.version>2020.0.3</spring.cloud.version>
+        <spring.boot.version>2.3.10.RELEASE</spring.boot.version>
+        <spring.cloud.version>Hoxton.SR11</spring.cloud.version>
         <alibaba.cloud.version>2.1.0.RELEASE</alibaba.cloud.version>
         <alibaba.druid.version>1.1.22</alibaba.druid.version>
         <mybatis.version>2.1.4</mybatis.version>
