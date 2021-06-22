@@ -20,13 +20,14 @@ public class PaymentHystrixMain8001 {
         SpringApplication.run(PaymentHystrixMain8001.class, args);
     }
 
-    @Bean
+    /*@Bean
     public ServletRegistrationBean getStreamServlet(){
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
         ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
-        registrationBean.setLoadOnStartup(1);  //系统启动时加载顺序
-        registrationBean.addUrlMappings("/hystrix.stream");//路径
+        // 系统启动时加载顺序
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/hystrix.stream");
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
-    }
+    }*/
 }
