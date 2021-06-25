@@ -18,6 +18,12 @@ spring:
       profile: prod
       uri: http://localhost:3344
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 management:
   endpoints:
     web:

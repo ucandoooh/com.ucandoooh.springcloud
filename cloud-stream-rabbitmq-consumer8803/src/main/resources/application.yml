@@ -1,0 +1,29 @@
+server:
+  port: 8803
+
+spring:
+  application:
+    name: cloud-stream-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    discovery:
+      service-name: ${spring.application.name}
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        input:
+          destination: studyExchange
+          content-type: application/json
+          binder: defaultRabbit
+          group: com.ucandoooh.groupA
